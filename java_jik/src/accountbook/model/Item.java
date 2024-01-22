@@ -56,6 +56,9 @@ public class Item implements Serializable{
 	}
 	//수입 카테고리가 맞는지 확인
 	public static boolean checkIncomeCategory(String category) {
+		/* enum의 values()는 열거형 각 항목들이 하나씩 들어있는 배열을 반환하는 메서드
+		 * enum에 있는 것들을 반환한다. 지정된 값이 외는 반환 안됨.
+		 * */
 		for(IncomeCategory iCategory : IncomeCategory.values()) {
 			if(iCategory.toString().equals(category)) {
 				return true;
